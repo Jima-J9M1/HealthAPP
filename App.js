@@ -19,6 +19,8 @@ import WeightChart from './screens/WeightChart';
 import OxgenChart from './screens/OxgenChart';
 import ProgressBar from './screens/ProgressBar';
 import ProgressChart from './components/ProgressChart';
+import GetValue from './screens/GetValue';
+import Profile from './screens/Profile';
 
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +33,7 @@ export default function App() {
     <TailwindProvider>
       <Stack.Navigator>
         <Stack.Screen name='Home' component={Register} />
+        <Stack.Screen name='GetValue' component={GetValue} />
         <Stack.Screen name='BloodChart' component={BloodPChart} />
         <Stack.Screen name='OxgenLevel' component={OxgenChart} />
         <Stack.Screen name='WeigthChart' component={WeightChart} />
@@ -38,6 +41,10 @@ export default function App() {
         <Stack.Screen name='Measure' component={Measure} />
         <Stack.Screen name='Weight' component={WeightMeasure} />
         <Stack.Screen name='User' component={User} />
+        <Stack.Screen name='Register' component={Register} />
+        <Stack.Screen name='Login' component={Login} />
+        <Stack.Screen name='Profile' component={Profile} />
+
         </Stack.Navigator>
     </TailwindProvider>
     </NavigationContainer>

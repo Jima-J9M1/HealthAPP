@@ -18,7 +18,8 @@ const Navigation = ({Navigation}) => {
       </View>
       </Pressable>
 
-    <Pressable onPress={()=>Navigation.navigate("User")}>
+    <Pressable onPress={()=>Navigation.push("User")}>
+
     <View>
          <Icon name="user" size={25} color="black" />
     </View> 

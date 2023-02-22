@@ -20,12 +20,12 @@ const BloodPChart = () => {
 
 
 
-      const sampleData = [
-        { x: 1, y: 20 },
-        { x: 2, y: 90 },
-        { x: 3, y: 20},
-        { x: 4, y: 10 }
-      ]
+    const sampleData = [
+      { x: "Jan", y: 20 },
+      { x: "Feb", y: 40 },
+      { x: "Mar", y: 80},
+      { x: "Apr", y: 120 }
+    ]
 
   return (
     <SafeAreaView>

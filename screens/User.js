@@ -19,23 +19,20 @@ const User = () => {
 
   return (
     <SafeAreaView>
-    <ScrollView className="mb-24">
+    <ScrollView className="mb-32 pb-16">
     <View>
       <Layout/>
       
       <View className="p-2 mx-2 space-y-2">
            
-        <TouchableOpacity className="p-3 bg-white  rounded-md">
+        <Pressable className="p-3 bg-white  rounded-md" onPress={()=>navigation.navigate("Profile")}>
                 <Text className="text-xl font-bold">Profile</Text>
-        </TouchableOpacity>
+        </Pressable>
         
-        <TouchableOpacity className="p-3 bg-white  rounded-md">
-                <Text className="text-xl font-bold">Blog</Text>
-        </TouchableOpacity>
         
-        <TouchableOpacity className="p-3 bg-white  rounded-md">
+        <Pressable className="p-3 bg-white  rounded-md" onPress={() => navigation.navigate("Login")}>
                 <Text className="text-xl font-bold">Logout</Text>
-        </TouchableOpacity>
+        </Pressable>
 
       </View>
     </View>

@@ -25,12 +25,12 @@ const Layout = ({press}) => {
             </View>
             <Pressable onPress={press}>
             <Image 
-            source={ require('../assets/Images/jima.jpg') }
+            source={ require('../assets/Images/avatar.png') }
             className="h-9 w-9 bg-gray-300 p-4 pt-6 rounded-full " />
             </Pressable>
             </View>
             <View className="flex-row p-3">
-            <View className="flex-row space-x-2 flex-1 bg-gray-200 p-2 itmes-center rounded-full">
+            {/* <View className="flex-row space-x-2 flex-1 bg-gray-200 p-2 itmes-center rounded-full">
 
             <Icon name="search" size={25} color="gray"/>
             <TextInput 
@@ -38,7 +38,7 @@ const Layout = ({press}) => {
             keyboardType='default'
             />
 
-            </View>
+            </View> */}
             </View>
             </View>
   )

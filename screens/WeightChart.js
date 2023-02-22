@@ -10,10 +10,10 @@ import Title from '../components/Title'
 const WeightChart = () => {
    
   const sampleData = [
-    { x: 1, y: 20 },
-    { x: 2, y: 40 },
-    { x: 3, y: 80},
-    { x: 4, y: 120 }
+    { x: "Jan", y: 20 },
+    { x: "Feb", y: 40 },
+    { x: "Mar", y: 80},
+    { x: "Apr", y: 120 }
   ]
 
   const navigation = useNavigation();

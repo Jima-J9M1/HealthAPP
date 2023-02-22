@@ -7,13 +7,34 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 const Login = () => {
 
   const navigation = useNavigation();
+     
+    const[ email, setEmail] = useState('')
+    const[ password, setPassword] = useState('')
+    const[ error, setError] = useState('')
 
     useLayoutEffect(()=>{
       navigation.setOptions({
         headerShown:false,
       })
     },[])
+ 
+    const login = ()=>{
+      if (!email || !password){
+        setError("Please fill all the fields")
+      }else{
+        setLoading(true)
+        navigation.navigate("Home")
+      }
+    }
 
+    const fail = ()=>{
+      if (error !== ""){
+        return(
+          <Text className="text-red-300 font-bold">{error}</Text>
+        )
+      }
+    }
+      
   return (
     <SafeAreaView>
     <View>
@@ -27,13 +48,18 @@ const Login = () => {
         <View className="p-3 border border-solid border-blue-500 rounded-2xl">
         <TextInput placeholder='@email'/>
         </View>
-        <Pressable className="p-3 bg-blue-400 rounded-full items-center" >
+        <Pressable className="p-3 bg-blue-400 rounded-full items-center" onPress={()=>login()} >
           <Text className="text-white font-bold">Login</Text>
         </Pressable>
       </View>
       </View>
       <View className="m-auto mt-36">
+        {fail()}
+      </View>
+      <View className="m-auto mt-36">
+      <Pressable onPress={navigation.navigate("Register")}>
       <Text className="text-gray-500">New To Health Monitor App <Text className="font-bold text-blue-500">Register</Text></Text>
+      </Pressable>
       </View>
     </View>
     </SafeAreaView>
